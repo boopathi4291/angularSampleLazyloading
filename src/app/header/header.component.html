@@ -1,0 +1,20 @@
+<nav class="navbar navbar-light bg-faded mb-5">
+    
+    <div class="navbar-expand mr-auto">
+      <div class="navbar-nav">
+        
+        <a class="nav-item nav-link"  routerLinkActive="active" routerLink='/map'>Map</a>
+        <a class="nav-item nav-link"  routerLinkActive="active" routerLink='/chart'>Charts</a>
+        <a class="nav-item nav-link"  routerLinkActive="active" routerLink='/table'>table</a>
+      </div>
+    </div>
+    <div class="navbar-expand ml-auto navbar-nav">
+        <button mat-icon-button color='primary' [matMenuTriggerFor]="menu">
+          <mat-icon>account_box</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>Messages</button>
+          <button mat-menu-item>Log out</button>
+        </mat-menu>
+    </div>
+  </nav>

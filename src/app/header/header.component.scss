@@ -1,0 +1,19 @@
+nav{
+    background: white !important;
+
+    a{
+        color:#216592 !important;
+        font-weight: bold;
+        border-radius:5px;
+    }
+    .nav-item{
+        width:100px;
+        float: left;
+        text-align: center;
+        margin: 0 5px;
+    }
+    .active{
+        background: lightseagreen;
+        color:white !important;
+    }
+}

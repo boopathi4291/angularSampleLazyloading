@@ -1,0 +1,27 @@
+<mgl-map 
+    [style]="style"
+    [zoom]="[2]"
+  >
+   <mgl-marker *ngFor='let feature of features; let i = index'
+   #myMarker
+   [lngLat]=feature.geometry.coordinates
+ >
+   <div
+     [ngStyle]="{
+       
+       'background-color':feature.properties.state== 'ok'?'green':feature.properties.state== 'warning'?'orange':'red',
+       'background-size': 'cover',
+       width: '20px',
+       height: '20px',
+       'border-radius': '50%',
+       cursor: 'pointer'
+     }"
+   >
+   </div>
+ </mgl-marker>
+ <mgl-popup 
+   [marker]="myMarker"
+ >
+pop up
+ </mgl-popup>
+  </mgl-map>
